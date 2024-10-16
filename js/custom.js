@@ -20,27 +20,3 @@ function search_animal() {
     }
   }
 }
-
-
-// share button script
-
-function updateModal() {
-  var currentUrl = window.location.href;
-  document.getElementById("urlInput").value = currentUrl;
-}
-
-function copyToClipboard() {
-  var copyText = document.getElementById("urlInput");
-  copyText.select();
-  document.execCommand("copy");
-  document.getElementById("copyButton").innerHTML = "Copied";
-}
-
-document.getElementById("shareButton").addEventListener("click", function () {
-  updateModal();
-  $('#shareModal').modal('show');
-});
-
-document.getElementById("copyButton").addEventListener("click", function () {
-  copyToClipboard();
-});
